@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-900: #030712;
+  --color-navy-800: #050B14;
+  --color-navy-700: #0B1320;
+  --color-navy-600: #111C2D;
+  --color-electric-blue: #00E5FF;
+  --color-electric-blue-hover: #00B8CC;
+  --color-cyan-subtle: #00F0FF20;
+
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-navy-800);
+    color: #e2e8f0;
+  }
+}
+
+/* Custom Utilities for glow and grids */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glow-blue {
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.2);
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(0, 229, 255, 0.5);
+}
+
+/* Premium Glassmorphism */
+.glass-panel {
+  background: rgba(11, 19, 32, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-navy-900);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.5);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mask-edges {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
