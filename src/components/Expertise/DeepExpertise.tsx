@@ -298,7 +298,7 @@ sns.heatmap(df.corr(), annot=<span className="text-orange-400">True</span>, cmap
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="glass-panel p-10 rounded-3xl border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden group"
+              className="glass-panel p-6 md:p-10 rounded-3xl border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden group"
             >
               <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                 <LineChart className="w-32 h-32 text-electric-blue" />
@@ -327,7 +327,7 @@ sns.heatmap(df.corr(), annot=<span className="text-orange-400">True</span>, cmap
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="glass-panel p-10 rounded-3xl border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden group"
+              className="glass-panel p-6 md:p-10 rounded-3xl border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden group"
             >
               <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                 <Cpu className="w-32 h-32 text-cyan-400" />

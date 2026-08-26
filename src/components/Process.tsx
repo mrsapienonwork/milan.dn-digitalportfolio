@@ -68,7 +68,7 @@ export default function Process() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, type: "spring" }}
-                    className={`flex-1 glass-panel p-8 rounded-2xl text-left ${isEven ? 'md:text-left' : 'md:text-right'} w-full md:w-auto relative z-10 hover:border-electric-blue/30 transition-colors group`}
+                    className={`flex-1 glass-panel p-6 md:p-8 rounded-2xl text-left ${isEven ? 'md:text-left' : 'md:text-right'} w-full md:w-auto relative z-10 hover:border-electric-blue/30 transition-colors group`}
                   >
                     <div className="text-[10px] font-bold tracking-[0.3em] text-electric-blue mb-3">STAGE {step.number}</div>
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide group-hover:text-glow transition-all">

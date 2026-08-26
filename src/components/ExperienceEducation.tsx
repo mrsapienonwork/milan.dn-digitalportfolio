@@ -13,10 +13,10 @@ export default function ExperienceEducation() {
               <div className="h-px flex-1 bg-gradient-to-r from-electric-blue/50 to-transparent" />
             </div>
             
-            <div className="relative pl-10 border-l border-white/10 pb-8">
+            <div className="relative pl-6 md:pl-10 border-l border-white/10 pb-8">
               <div className="absolute top-0 left-0 -ml-[5px] w-2.5 h-2.5 rounded-full bg-electric-blue glow-blue ring-4 ring-navy-900" />
               
-              <div className="glass-panel p-8 rounded-2xl hover:border-electric-blue/30 transition-colors">
+              <div className="glass-panel p-6 md:p-8 rounded-2xl hover:border-electric-blue/30 transition-colors">
                 <h3 className="font-display text-2xl font-bold text-white mb-3">
                   Data Science Intern
                 </h3>
@@ -46,7 +46,7 @@ export default function ExperienceEducation() {
                 <div className="h-px flex-1 bg-gradient-to-r from-electric-blue/50 to-transparent" />
               </div>
               
-              <div className="relative pl-10 border-l border-white/10">
+              <div className="relative pl-6 md:pl-10 border-l border-white/10">
                 <div className="absolute top-0 left-0 -ml-[5px] w-2.5 h-2.5 rounded-full bg-white/30 ring-4 ring-navy-900" />
                 
                 <div className="glass-panel p-6 rounded-2xl">

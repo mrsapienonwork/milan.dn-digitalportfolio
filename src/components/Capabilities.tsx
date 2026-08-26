@@ -74,7 +74,7 @@ export default function Capabilities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-panel p-8 group hover:bg-white/[0.02] transition-colors border border-white/5 hover:border-electric-blue/30 rounded-2xl"
+              className="glass-panel p-6 md:p-8 group hover:bg-white/[0.02] transition-colors border border-white/5 hover:border-electric-blue/30 rounded-2xl"
             >
               <div className="w-12 h-12 rounded-full bg-electric-blue/10 flex items-center justify-center text-electric-blue mb-6 group-hover:scale-110 group-hover:bg-electric-blue group-hover:text-navy-900 transition-all duration-500">
                 {item.icon}

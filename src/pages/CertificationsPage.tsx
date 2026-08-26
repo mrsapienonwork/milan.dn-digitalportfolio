@@ -29,14 +29,14 @@ export default function CertificationsPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificates.map((cert, idx) => (
             <motion.div
               key={cert.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-panel p-8 rounded-2xl border border-white/5 group hover:border-electric-blue/30 transition-all cursor-pointer flex flex-col justify-between"
+              className="glass-panel p-6 md:p-8 rounded-2xl border border-white/5 group hover:border-electric-blue/30 transition-all cursor-pointer flex flex-col justify-between"
               onClick={() => setSelectedCert(cert.file)}
             >
               <div>
@@ -66,31 +66,37 @@ export default function CertificationsPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 lg:p-12 bg-navy-900/95 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-12 bg-navy-900/95 backdrop-blur-sm"
             onClick={() => setSelectedCert(null)}
           >
-            <button 
-              className="absolute top-6 right-6 text-white/50 hover:text-white bg-white/5 p-3 rounded-full transition-colors z-[110]"
-              onClick={() => setSelectedCert(null)}
-            >
-              <X className="w-6 h-6" />
-            </button>
-            
             <motion.div 
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="relative max-w-5xl w-full h-full max-h-[80vh] bg-navy-800 rounded-xl overflow-hidden border border-white/10 shadow-2xl flex items-center justify-center p-4"
+              className="relative max-w-5xl w-full h-full md:h-auto md:max-h-[80vh] bg-navy-800 md:rounded-xl overflow-hidden border border-white/10 shadow-2xl flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              <img 
-                src={selectedCert} 
-                alt="Certificate Viewer" 
-                className="max-w-full max-h-full object-contain"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=1600'; // Generic certificate fallback placeholder
-                }}
-              />
+              {/* Header with Close Button */}
+              <div className="flex justify-end p-4 md:absolute md:top-2 md:right-2 md:p-0 z-10 shrink-0">
+                <button 
+                  className="text-white/50 hover:text-white bg-white/5 p-2 md:p-3 rounded-full transition-colors"
+                  onClick={() => setSelectedCert(null)}
+                  aria-label="Close modal"
+                >
+                  <X className="w-5 h-5 md:w-6 md:h-6" />
+                </button>
+              </div>
+
+              <div className="flex-1 flex items-center justify-center p-4 overflow-hidden">
+                <img 
+                  src={selectedCert} 
+                  alt="Certificate Viewer" 
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=1600';
+                  }}
+                />
+              </div>
             </motion.div>
           </motion.div>
         )}

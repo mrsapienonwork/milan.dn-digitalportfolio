@@ -33,7 +33,7 @@ export default function Contact() {
               <div>
                 <h4 className="text-[10px] font-bold tracking-[0.2em] text-slate-500 mb-2 uppercase">Email</h4>
                 <div className="flex flex-col gap-1">
-                  <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">milandhoundiyal482@gmail.com</span>
+                  <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors break-all">milandhoundiyal482@gmail.com</span>
                 </div>
               </div>
             </a>

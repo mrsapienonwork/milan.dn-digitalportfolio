@@ -289,7 +289,7 @@ export default function ProjectPage() {
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-20">
           {projects.map((project, idx) => (
             <motion.button
               key={project.id}
@@ -297,7 +297,7 @@ export default function ProjectPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               onClick={() => setSelectedPdf(project)}
-              className="group relative flex flex-col text-left rounded-3xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-electric-blue/30 transition-all overflow-hidden h-[400px] focus:outline-none focus:ring-2 focus:ring-electric-blue"
+              className="group relative flex flex-col text-left rounded-3xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-electric-blue/30 transition-all overflow-hidden h-[300px] sm:h-[350px] md:h-[400px] focus:outline-none focus:ring-2 focus:ring-electric-blue"
               aria-label={`View ${project.title}`}
             >
               {/* PDF Preview Area */}
@@ -352,41 +352,42 @@ export default function ProjectPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-navy-950/95 backdrop-blur-xl"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-8 bg-navy-950/95 backdrop-blur-xl"
             onClick={() => setSelectedPdf(null)}
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
           >
-            {/* Close Button */}
-            <button
-              className="absolute top-4 right-4 md:top-6 md:right-6 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 p-3 md:p-4 rounded-full transition-all z-[110] focus:outline-none focus:ring-2 focus:ring-white"
-              onClick={() => setSelectedPdf(null)}
-              aria-label="Close modal"
-            >
-              <X className="w-6 h-6" />
-            </button>
-
             {/* PDF Container */}
             <motion.div
               initial={{ scale: 0.95, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
-              className="relative w-full h-full max-w-6xl bg-navy-900 rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex flex-col"
+              className="relative w-full h-full max-w-6xl bg-navy-900 md:rounded-2xl overflow-hidden border-x-0 md:border-x border-y border-white/10 shadow-2xl flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="flex items-center justify-between p-5 md:p-6 border-b border-white/10 bg-white/[0.02]">
-                <h2 id="modal-title" className="text-base md:text-lg font-bold text-white tracking-widest">{selectedPdf.title}</h2>
-                <a 
-                  href={selectedPdf.pdf} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-[10px] md:text-xs font-bold tracking-widest text-electric-blue hover:text-white transition-colors flex items-center gap-2"
+              <div className="flex items-center justify-between p-4 md:p-6 border-b border-white/10 bg-white/[0.02] shrink-0">
+                <div className="flex flex-col gap-1 pr-4">
+                  <h2 id="modal-title" className="text-base md:text-lg font-bold text-white tracking-widest line-clamp-1">{selectedPdf.title}</h2>
+                  <a 
+                    href={selectedPdf.pdf} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[10px] md:text-xs font-bold tracking-widest text-electric-blue hover:text-white transition-colors flex items-center gap-2"
+                  >
+                    <span>OPEN IN NEW TAB</span>
+                    <ExternalLink className="w-3 h-3 md:w-4 md:h-4" />
+                  </a>
+                </div>
+                {/* Close Button */}
+                <button
+                  className="shrink-0 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-white"
+                  onClick={() => setSelectedPdf(null)}
+                  aria-label="Close modal"
                 >
-                  <span className="hidden sm:inline">OPEN IN NEW TAB</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                  <X className="w-5 h-5 md:w-6 md:h-6" />
+                </button>
               </div>
 
               {/* Native PDF.js Viewer */}

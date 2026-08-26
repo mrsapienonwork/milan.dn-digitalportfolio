@@ -58,7 +58,7 @@ export default function ExpertiseOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-panel p-8 rounded-2xl border border-white/5 group hover:-translate-y-2 hover:border-electric-blue/40 hover:shadow-[0_10px_40px_rgba(0,229,255,0.1)] transition-all duration-500 flex flex-col justify-between"
+              className="glass-panel p-6 md:p-8 rounded-2xl border border-white/5 group hover:-translate-y-2 hover:border-electric-blue/40 hover:shadow-[0_10px_40px_rgba(0,229,255,0.1)] transition-all duration-500 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-8">

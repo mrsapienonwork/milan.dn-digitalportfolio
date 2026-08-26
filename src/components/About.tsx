@@ -26,10 +26,10 @@ export default function About() {
 
             <div>
               <p className="text-xs font-bold tracking-[0.2em] text-electric-blue mb-4 uppercase">5 Pillars of Growth</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
                 {['Data', 'AI', 'Insights', 'Strategy', 'Growth'].map((pillar, i) => (
-                  <div key={pillar} className="px-4 py-3 border border-white/10 rounded-lg bg-white/[0.02] text-white font-medium text-sm flex items-center gap-3">
-                    <span className="text-electric-blue font-bold">0{i + 1}</span> {pillar}
+                  <div key={pillar} className="px-3 md:px-4 py-2 md:py-3 border border-white/10 rounded-lg bg-white/[0.02] text-white font-medium text-xs md:text-sm flex items-center gap-2 md:gap-3">
+                    <span className="text-electric-blue font-bold">0{i + 1}</span> <span className="truncate">{pillar}</span>
                   </div>
                 ))}
               </div>

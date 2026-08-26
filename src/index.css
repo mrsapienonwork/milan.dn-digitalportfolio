@@ -17,6 +17,7 @@
   body {
     background-color: var(--color-navy-800);
     color: #e2e8f0;
+    overflow-x: hidden;
   }
 }
 

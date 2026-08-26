@@ -32,7 +32,7 @@ export default function ExpertiseMatrix() {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden glass-panel border border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden glass-panel border border-white/10">
           {matrixData.map((col, idx) => (
             <motion.div 
               key={col.category}
@@ -40,7 +40,7 @@ export default function ExpertiseMatrix() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-navy-950 p-8 md:p-10 flex flex-col"
+              className="bg-navy-950 p-6 md:p-10 flex flex-col"
             >
               <div className="text-xs font-bold tracking-[0.2em] text-electric-blue uppercase mb-8 border-b border-white/5 pb-4">
                 {col.category}

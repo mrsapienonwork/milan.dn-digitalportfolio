@@ -27,7 +27,7 @@ export default function Hero() {
             </p>
           </div>
           
-          <h1 className="font-display text-5xl md:text-6xl xl:text-[84px] font-bold leading-[1.05] tracking-tight mb-8 text-white">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-bold leading-[1.1] tracking-tight mb-6 sm:mb-8 text-white break-words">
             Aspiring <br />
             Data <br />
             <span className="relative inline-block mt-2">
@@ -47,17 +47,17 @@ export default function Hero() {
             I transform complex, raw, unstructured datasets into meaningful visualizations and business insights that empower decision-makers to solve problems and drive strategy.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
             <Link 
               to="/work"
-              className="group relative px-8 py-4 bg-electric-blue text-navy-900 font-bold tracking-widest text-sm rounded-full overflow-hidden transition-all hover:bg-white hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center gap-3"
+              className="group relative px-8 py-4 bg-electric-blue text-navy-900 font-bold tracking-widest text-sm rounded-full overflow-hidden transition-all hover:bg-white hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 w-full sm:w-auto"
             >
               EXPLORE MY WORK
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link 
               to="/contact"
-              className="group px-8 py-4 border border-white/10 text-white hover:border-electric-blue hover:text-electric-blue font-bold tracking-widest text-sm rounded-full transition-all flex items-center gap-3 glass-panel hover:bg-electric-blue/5"
+              className="group px-8 py-4 border border-white/10 text-white hover:border-electric-blue hover:text-electric-blue font-bold tracking-widest text-sm rounded-full transition-all flex items-center justify-center gap-3 glass-panel hover:bg-electric-blue/5 w-full sm:w-auto"
             >
               LET'S CONNECT
             </Link>
@@ -80,7 +80,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:col-span-6 xl:col-span-7 relative h-[500px] lg:h-[750px] flex items-center justify-center lg:justify-end"
+          className="lg:col-span-6 xl:col-span-7 relative flex items-center justify-center lg:justify-end mt-8 mb-12 lg:mt-0 lg:mb-0 w-full min-h-[320px] lg:min-h-0 lg:h-[750px] overflow-visible"
         >
           <HeroVisual />
         </motion.div>
