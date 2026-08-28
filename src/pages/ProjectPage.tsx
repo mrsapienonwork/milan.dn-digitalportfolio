@@ -7,7 +7,7 @@ import 'react-pdf/dist/Page/TextLayer.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const GOOGLE_DRIVE_FOLDER_URL = "https://drive.google.com/drive/folders/AHDB1345284";
+const GOOGLE_DRIVE_FOLDER_URL = "https://drive.google.com/drive/folders/1dM8yDN-58bzSawGGlL5vdlrqLosaQage?usp=sharing";
 
 interface ProjectConfig {
   id: number;
